@@ -86,3 +86,13 @@ Destroy created resources when done:
 cd terraform
 terraform destroy
 ```
+
+[ Developer ] --( Terraform Apply )--> [ AWS EC2 Instance ]
+                                               │
+                                       (User-Data Script)
+                                               │
+                                               ▼
+                                      [ Docker Engine ]
+                                               │
+                                               ▼
+                                  [ Node.js Container (Port 80) ]
